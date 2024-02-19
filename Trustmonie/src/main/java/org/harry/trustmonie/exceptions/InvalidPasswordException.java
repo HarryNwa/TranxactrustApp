@@ -1,4 +1,7 @@
 package org.harry.trustmonie.exceptions;
 
-public class InvalidPasswordException {
+public class InvalidPasswordException extends TranxactrustException{
+    public InvalidPasswordException(String message){super (message);
+    }
 }
+

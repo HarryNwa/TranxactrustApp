@@ -14,7 +14,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @SuperBuilder
 @Table(name = "email-users")
-public class WalletHolder {
+public class EmailUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -1,2 +1,9 @@
-package org.harry.trustmonie.data.repository;public interface NotificationsRepository {
+package org.harry.trustmonie.data.repository;
+
+import org.harry.trustmonie.data.model.Notifications;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface NotificationsRepository extends JpaRepository<Notifications, Long> {
+
 }
+

@@ -15,11 +15,42 @@
 	<description>TranxactrustApp</description>
 	<properties>
 		<java.version>17</java.version>
+		<spring.boot.dependencies.version>3.1.2</spring.boot.dependencies.version>
 	</properties>
+
+	  <dependencyManagement>
+		  <dependencies>
+			  <dependency>
+				  <groupId>org.springframework.boot</groupId>
+				  <artifactId>spring-boot-dependencies</artifactId>
+				  <version>${spring.boot.dependencies.version}</version>
+				  <scope>import</scope>
+			  </dependency>
+		  </dependencies>
+	  </dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.harry</groupId>
+			<artifactId>Trustmonie</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.harry</groupId>
+			<artifactId>Email</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.harry</groupId>
+			<artifactId>Investrust</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>

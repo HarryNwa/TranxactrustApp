@@ -1,2 +1,22 @@
-package org.harry.trustmonie.data.model;public class PaymentVerificationCode {
+package org.harry.trustmonie.data.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
+@Data
+@Entity
+@RequiredArgsConstructor
+@AllArgsConstructor
+public class PaymentVerificationCode {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String verificationCode;
+
 }
+

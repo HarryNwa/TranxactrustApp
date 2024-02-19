@@ -1,7 +1,7 @@
 package org.harry.trustmonie.exceptions;
 
-public class IllegalNameFormat extends TranxactrustException{
-    public IllegalNameFormat(String message) {
+public class IllegalNameFormatException extends TranxactrustException{
+    public IllegalNameFormatException(String message) {
         super(message);
     }
 }

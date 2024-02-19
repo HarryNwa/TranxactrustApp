@@ -1,0 +1,5 @@
+Email_HOST: smtp.gmail.com
+EMAIL_PORT: 587
+EMAIL_ADDRESS: nwaogwugwuharrison@gmail.com
+EMAIL_PASSWORD: qrjz pijj hapk lqye
+VERIFY_EMAIL_HOST: http://localhost:${SERVER_PORT:8070}
