@@ -66,7 +66,6 @@ public class UserServiceImpl implements UserService{
 
         WalletHolder walletHolder = walletHolderMono.block();
 
-        // Saving confirmation
         Confirmation confirmation = new Confirmation(user);
         confirmationRepository.save(confirmation);
 
@@ -75,7 +74,6 @@ public class UserServiceImpl implements UserService{
 //        emailService.sendMimeMessageWithEmbeddedFiles(user.getUserName(), user.getEmail(), confirmation.getToken());
 //        emailService.sendHtmlEmail(user.getUserName(), user.getEmail(), confirmation.getToken());
         emailService.sendHtmlEmailWithEmbeddedFiles(user.getUserName(), user.getEmail(), confirmation.getToken());
-
         return walletHolder;
     }
 
