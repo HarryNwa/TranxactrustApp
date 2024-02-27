@@ -3,17 +3,18 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka
 
 spring:
   profiles:
     active: ${ACTIVE_PROFILE:dev}
+
   application:
-    name: trustmonie
-  config:
-    import: optional:configserver:http://localhost:9890
+    name: email
+#  config:
+#    import: optional:configserver:http://localhost:9890
   datasource:
-    url: jdbc:mysql://localhost:3306/trustmonie_management?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/email_management?createDatabaseIfNotExist=true
     username: root
     password: Switch@906
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -24,12 +25,12 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
+        database: mysql
         jdbc:
           time_zone: UTC
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
-
 
   mail:
     host: ${Email_HOST}
@@ -50,10 +51,11 @@ spring:
             enable: true
             required: true
     verify:
-      host: ${VERIFY_EMAIL_HOST}
+#            host: ${VERIFY_EMAIL_HOST}
+      host: http://localhost:8070
+#      host: http://localhost:${SERVER_PORT}
+
 
 server:
-  port: ${SERVER_PORT:8090}
-
-
+  port: ${SERVER_PORT:8070}
 

@@ -6,8 +6,6 @@ server:
 spring:
   application:
     name: gateway
-  config:
-    import: optional:configserver:http://localhost:9809
   cloud:
     gateway:
       discovery:
@@ -17,12 +15,12 @@ spring:
         - id: trustmonie
           uri: http://localhost:9000
           predicates:
-            - Path=/api/users/**
+            - Path=/api/v1/users/**
         - id: email
           uri: http://localhost:8070
           predicates:
-            - Path=/api/email/**
+            - Path=/api/v1/email/**
         - id: investrust
           uri: http://localhost:7000
           predicates:
-            - Path=/api/investrust/**
+            - Path=/api/v1/investrust/**

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"org.harry.email.service"})
+@ComponentScan(basePackages = {"org.harry.email.service", "org.harry.email.config" })
 @EntityScan({"org.harry.email.user", "org.harry.trustmonie.data.model", "org.harry.trustmonie.user"})
 public class EmailApplication {
 

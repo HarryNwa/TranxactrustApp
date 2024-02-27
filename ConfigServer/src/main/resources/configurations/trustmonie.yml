@@ -3,18 +3,16 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:9876/eureka/
+      defaultZone: http://localhost:9876/eureka
 
 spring:
   profiles:
     active: ${ACTIVE_PROFILE:dev}
 
   application:
-    name: investrust
-  config:
-    import: optional:configserver:http://localhost:9890
+    name: trustmonie
   datasource:
-    url: jdbc:mysql://localhost:3306/investrust_management?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/trustmonie_management?createDatabaseIfNotExist=true
     username: root
     password: Switch@906
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -25,11 +23,12 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
+        database: mysql
         jdbc:
           time_zone: UTC
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
 server:
-  port: ${SERVER_PORT:8060}
+  port: ${SERVER_PORT:8090}
 

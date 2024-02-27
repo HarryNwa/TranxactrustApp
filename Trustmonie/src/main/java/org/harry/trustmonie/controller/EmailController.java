@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RequestMapping("api/users")
 public class EmailController {
 
@@ -52,5 +52,10 @@ public class EmailController {
 
         );
     }
+
+//    @RequestMapping(method = RequestMethod.OPTIONS)
+//    public ResponseEntity<?> options() {
+//        return ResponseEntity.ok().build();
+//    }
 }
 
